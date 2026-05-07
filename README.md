@@ -1,19 +1,36 @@
-# AI-Driven Behavioral Analytics for Autism Screening
+# AI-Driven Autism Behavioral Analytics
 
-## Project Overview
+## Overview
+This project analyzes behavioral screening data related to Autism Spectrum Disorder (ASD) using Python, Machine Learning, and Tableau.
 
-This project analyzes behavioral autism screening data using data analytics, machine learning, and clustering techniques to identify behavioral patterns and support-needs groupings.
+The project combines:
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Machine learning classification
+- Behavioral segmentation using clustering
+- Interactive Tableau dashboarding
 
-The goal of this project is not to diagnose autism, but to explore behavioral screening indicators and uncover meaningful behavioral segments that may help support understanding of neurodivergent individuals.
+The goal is to identify behavioral patterns associated with ASD and provide analytical insights through data visualization.
+
+---
+
+## Objectives
+
+- Analyze behavioral assessment data
+- Predict ASD outcomes using machine learning
+- Identify behavioral clusters using K-Means clustering
+- Visualize demographic and behavioral insights
+- Build an interactive Tableau dashboard
 
 ---
 
 ## Dataset
 
 Dataset includes:
-- Behavioral screening question scores (A1–A10)
-- Demographic information
-- ASD screening classification labels
+- Behavioral assessment scores (A1–A10)
+- Demographic attributes
+- ASD classification labels
 
 Total records:
 - 704 participants
@@ -22,62 +39,108 @@ Total records:
 
 ## Technologies Used
 
+### Programming & Analytics
 - Python
 - Pandas
+- NumPy
 - Scikit-learn
+- XGBoost
+
+### Visualization
+- Tableau Public
 - Matplotlib
 - Seaborn
-- PCA
-- KMeans Clustering
-- Logistic Regression
-- VS Code
-- GitHub
 
 ---
 
-## Project Workflow
+## Project Structure
 
-### 1. Exploratory Data Analysis (EDA)
-- Target distribution analysis
-- Demographic analysis
-- Behavioral score analysis
+```bash
+AI_ASD_Analytics_Project/
+│
+├── data/
+├── notebooks/
+├── src/
+├── dashboard/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Exploratory Data Analysis
+
+Performed:
+- Behavioral score distribution analysis
+- Gender-based ASD analysis
+- Ethnicity distribution analysis
 - Correlation heatmaps
+- Behavioral trend analysis
 
-### 2. Feature Engineering
-- Created behavioral total score
-- Behavioral segmentation features
+---
 
-### 3. Machine Learning
-- Logistic Regression classification
-- Model evaluation
-- Feature importance analysis
+## Feature Engineering
 
-### 4. Unsupervised Learning
-- KMeans clustering
-- PCA dimensionality reduction
-- Behavioral cluster visualization
+Created behavioral features including:
+- behavior_total_score
+- communication_score
+- social_interaction_score
+- behavior_variability_score
+
+---
+
+## Machine Learning Models
+
+Implemented:
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+Evaluation metrics:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+---
+
+## Behavioral Segmentation
+
+Used:
+- K-Means Clustering
+- PCA visualization
+
+Goal:
+- Identify behavioral risk groups
+- Segment participants by behavioral patterns
+
+---
+
+## Tableau Dashboard
+
+
+
+![Dashboard Screenshot](autismdashboard.png)
+
+The Tableau dashboard includes:
+- KPI metrics
+- Demographic insights
+- ASD behavioral analysis
+- Cluster distribution analysis
 
 ---
 
 ## Key Insights
 
-- Behavioral screening scores strongly correlate with ASD classification outcomes.
-- Behavioral clustering revealed distinct participant groups with low, moderate, and high behavioral indicator patterns.
-- PCA visualization showed meaningful separation between behavioral groups.
-
----
-
-## Ethical Considerations
-
-This project is intended for educational and analytical purposes only.
-
-The model does not diagnose autism and should not be used for medical decision-making.
+- ASD-positive participants showed significantly higher behavioral scores.
+- Certain behavioral indicators strongly contributed to ASD classification.
+- Clustering identified distinct behavioral groups with varying severity levels.
 
 ---
 
 ## Future Improvements
 
-- Tableau dashboard integration
-- Prefect workflow automation
-- SHAP explainable AI
-- Advanced ML model comparison
+- Hyperparameter tuning
+- Model deployment with Streamlit
+- Real-time prediction interface
+- Advanced explainable AI analysis

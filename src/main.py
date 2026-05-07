@@ -1,6 +1,7 @@
 from visualization import plot_clusters
 from data_loader import load_data
 from preprocessing import clean_ethnicity, encode_target
+from feature_engineering import create_behavior_features
 
 from clustering import (
     scale_features,
@@ -45,3 +46,13 @@ print(pca_df.head())
 
 # Plot clusters
 plot_clusters(pca_df)
+
+# Feature engineering
+df = create_behavior_features(df)
+
+print(df[[
+    'behavior_total_score',
+    'communication_score',
+    'social_interaction_score',
+    'behavior_variability_score'
+]].head())
