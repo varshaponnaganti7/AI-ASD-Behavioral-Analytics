@@ -10,49 +10,53 @@ from clustering import (
 )
 
 
-# Load data
+# Load dataset
 df = load_data("data/Autism.csv")
 
 # Preprocessing
 df = clean_ethnicity(df)
 df = encode_target(df)
 
+# Feature engineering
+df = create_behavior_features(df)
+
 # Behavioral feature columns
 behavior_cols = [
-    'A1_Score', 'A2_Score', 'A3_Score', 'A4_Score', 'A5_Score',
-    'A6_Score', 'A7_Score', 'A8_Score', 'A9_Score', 'A10_Score'
+    'A1_Score', 'A2_Score', 'A3_Score',
+    'A4_Score', 'A5_Score',
+    'A6_Score', 'A7_Score',
+    'A8_Score', 'A9_Score',
+    'A10_Score'
 ]
 
-# Features
+# Feature matrix
 X = df[behavior_cols]
 
 # Scale features
 X_scaled = scale_features(X)
 
-# Run clustering
+# KMeans clustering
 clusters = run_kmeans(X_scaled)
 
-# Add clusters to dataframe
+# Add cluster labels
 df['cluster'] = clusters
 
-# Run PCA
+# PCA dimensionality reduction
 pca_df = run_pca(X_scaled)
 
-# Add cluster labels
+# Add cluster labels to PCA dataframe
 pca_df['cluster'] = clusters
 
-# Preview
+# Preview PCA results
 print(pca_df.head())
 
-# Plot clusters
-plot_clusters(pca_df)
-
-# Feature engineering
-df = create_behavior_features(df)
-
+# Preview engineered features
 print(df[[
     'behavior_total_score',
     'communication_score',
     'social_interaction_score',
     'behavior_variability_score'
 ]].head())
+
+# Visualize clusters
+plot_clusters(pca_df)
