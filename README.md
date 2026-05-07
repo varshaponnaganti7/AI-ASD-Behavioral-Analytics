@@ -128,6 +128,12 @@ The Tableau dashboard includes:
 - ASD behavioral analysis
 - Cluster distribution analysis
 
+### Interactive Tableau Dashboard
+
+View the live interactive dashboard here:
+
+[View Tableau Dashboard](https://public.tableau.com/app/profile/varsha.ponnaganti6764/viz/BehavioralSegmentationDemographicInsightsMachineLearningAnalysis/BehavioralSegmentationDemographicInsightsMachineLearningAnalysis/)
+
 ---
 
 ## Key Insights
