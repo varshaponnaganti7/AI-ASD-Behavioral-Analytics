@@ -120,7 +120,7 @@ Goal:
 
 
 
-![Dashboard Screenshot](autismdashboard.png)
+![Dashboard Screenshot](dashboard/autismdashboard.png)
 
 The Tableau dashboard includes:
 - KPI metrics
